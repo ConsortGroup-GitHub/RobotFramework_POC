@@ -1,0 +1,72 @@
+{"level":30,"time":"2023-09-07T11:14:58.767Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Listening on 65437"}
+{"level":30,"time":"2023-09-07T11:14:59.354Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:14:59.355Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:14:59.358Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:14:59.358Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:14:59.361Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-09-07T11:14:59.362Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"currentBrowser: undefined"}
+{"level":30,"time":"2023-09-07T11:15:00.638Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changed active context"}
+{"level":30,"time":"2023-09-07T11:15:00.969Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Video path: undefined"}
+{"level":30,"time":"2023-09-07T11:15:00.969Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changed active page"}
+{"level":30,"time":"2023-09-07T11:15:01.450Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method newPage"}
+{"level":30,"time":"2023-09-07T11:15:01.456Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-09-07T11:15:01.456Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //input[@name=\"user-name\"] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.537Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method fillText"}
+{"level":30,"time":"2023-09-07T11:15:01.542Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-09-07T11:15:01.542Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //input[@name=\"password\"] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.569Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method fillText"}
+{"level":30,"time":"2023-09-07T11:15:01.574Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method click"}
+{"level":30,"time":"2023-09-07T11:15:01.574Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //input[@name=\"login-button\"] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.736Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method click"}
+{"level":30,"time":"2023-09-07T11:15:01.741Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getText"}
+{"level":30,"time":"2023-09-07T11:15:01.741Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //div[@class='app_logo'] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.767Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Retrieved text for element //div[@class='app_logo'] containing Swag Labs"}
+{"level":30,"time":"2023-09-07T11:15:01.768Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getText"}
+{"level":30,"time":"2023-09-07T11:15:01.773Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getText"}
+{"level":30,"time":"2023-09-07T11:15:01.773Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //div[@class='app_logo'] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.785Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Retrieved text for element //div[@class='app_logo'] containing Swag Labs"}
+{"level":30,"time":"2023-09-07T11:15:01.786Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getText"}
+{"level":30,"time":"2023-09-07T11:15:01.791Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getText"}
+{"level":30,"time":"2023-09-07T11:15:01.791Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //div[@class='app_logo'] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.804Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Retrieved text for element //div[@class='app_logo'] containing Swag Labs"}
+{"level":30,"time":"2023-09-07T11:15:01.804Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getText"}
+{"level":30,"time":"2023-09-07T11:15:01.808Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getText"}
+{"level":30,"time":"2023-09-07T11:15:01.808Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //div[@class='app_logo'] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.819Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Retrieved text for element //div[@class='app_logo'] containing Swag Labs"}
+{"level":30,"time":"2023-09-07T11:15:01.819Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getText"}
+{"level":30,"time":"2023-09-07T11:15:01.825Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-09-07T11:15:01.825Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //li[@class='social_twitter'] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.853Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-09-07T11:15:01.859Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-09-07T11:15:01.859Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //li[@class='social_facebook'] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.878Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-09-07T11:15:01.881Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getElementStates"}
+{"level":30,"time":"2023-09-07T11:15:01.881Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Strict mode is enabled, find Locator with //li[@class='social_linkedin'] in page."}
+{"level":30,"time":"2023-09-07T11:15:01.902Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getElementStates"}
+{"level":30,"time":"2023-09-07T11:15:01.911Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.913Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.914Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.917Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.919Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changed active context"}
+{"level":30,"time":"2023-09-07T11:15:01.920Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changing current active page"}
+{"level":30,"time":"2023-09-07T11:15:01.920Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changed active page"}
+{"level":30,"time":"2023-09-07T11:15:01.924Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.926Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.928Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2023-09-07T11:15:01.928Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2023-09-07T11:15:01.930Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2023-09-07T11:15:01.931Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2023-09-07T11:15:01.933Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changing current active page"}
+{"level":30,"time":"2023-09-07T11:15:01.933Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changed active page"}
+{"level":30,"time":"2023-09-07T11:15:01.938Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.941Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.943Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changed active context"}
+{"level":30,"time":"2023-09-07T11:15:01.943Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changing current active page"}
+{"level":30,"time":"2023-09-07T11:15:01.943Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Changed active page"}
+{"level":30,"time":"2023-09-07T11:15:01.945Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method closeContext"}
+{"level":30,"time":"2023-09-07T11:15:01.952Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Removed page=6139f54f-911c-4cb9-a0e0-b8c478b605b0 from context=064edcd0-c053-4898-a5d8-013e448d0cd1 page stack"}
+{"level":30,"time":"2023-09-07T11:15:01.956Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method closeContext"}
+{"level":30,"time":"2023-09-07T11:15:01.963Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:01.964Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-09-07T11:15:02.036Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-09-07T11:15:02.108Z","pid":5272,"hostname":"CNTL-5CD9130KD6","msg":"End of node method closeAllBrowsers"}
