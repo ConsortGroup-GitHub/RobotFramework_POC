@@ -33,3 +33,4 @@ SecondSeleniumTest
 
     Add First Product on the Cart
     Check that cart number is    1
+

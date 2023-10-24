@@ -3,18 +3,14 @@ Library             SeleniumLibrary
 Variables    ../Pages/LoginPage.py
 
 *** Keywords ***
-
-
 Open Browser and Go to the URL
     [Arguments]    ${my_browser}    ${my_URL}
     Open Browser    ${my_URL}    ${my_browser}
     Wait Until Element Is Visible    ${txt_InputLogin}    
 
-
 Enter Username
     [Arguments]    ${username}
     Input Text    ${txt_InputLogin}    ${username}
-
 
 Enter Password
     [Arguments]    ${password}
