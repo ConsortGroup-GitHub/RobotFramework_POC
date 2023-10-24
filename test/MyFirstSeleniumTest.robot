@@ -90,4 +90,4 @@ IgnoreFailureKeyword
     Element Should Contain    //div[@class='app_logo']    wag L
 
 WarnOnFailureKeyword
-    Element Should Contain    //div[@class='app_logo']    wag L
+    Element Should Contain    //div[@class='app_logo']    wag l
