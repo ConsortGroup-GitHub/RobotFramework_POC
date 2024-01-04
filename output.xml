@@ -1,284 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20231024 16:03:42.862" rpa="false" schemaversion="4">
-<suite id="s1" name="ApiTesting" source="C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\test\ApiTesting.robot">
-<test id="s1-t1" name="Quick Get Request Test" line="11">
-<kw name="Create Session" library="RequestsLibrary">
-<arg>mysession</arg>
-<arg>${Base_URL}/users?page=2</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20231024 16:03:43.032" level="TRACE">Arguments: [ 'mysession' | 'https://reqres.in/api/users?page=2' ]</msg>
-<msg timestamp="20231024 16:03:43.032" level="INFO">Creating Session using : alias=mysession, url=https://reqres.in/api/users?page=2, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<msg timestamp="20231024 16:03:43.032" level="DEBUG">Creating session: mysession</msg>
-<msg timestamp="20231024 16:03:43.032" level="TRACE">Return: &lt;requests.sessions.Session object at 0x000001EDA7B14250&gt;</msg>
-<status status="PASS" starttime="20231024 16:03:43.031" endtime="20231024 16:03:43.032"/>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20231201 17:21:16.679" rpa="false" schemaversion="4">
+<suite id="s1" name="SG Login sikuli" source="C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\test\SG_Login_sikuli.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Start Sikuli Process</arg>
+<arg>AND</arg>
+<arg>Initialize All Images</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<msg timestamp="20231201 17:21:23.737" level="TRACE">Arguments: [ 'Start Sikuli Process' | 'AND' | 'Initialize All Images' ]</msg>
+<kw name="Start Sikuli Process" library="SikuliLibrary">
+<msg timestamp="20231201 17:21:23.737" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231201 17:21:23.738" level="DEBUG">Free TCP port is: 56092</msg>
+<msg timestamp="20231201 17:21:23.741" level="INFO">Starting process:
+java -jar C:\Users\david.nowak\AppData\Local\Programs\Python\Python311\Lib\site-packages\SikuliLibrary\lib\SikuliLibrary.jar 56092 "C:\Users\david.nowak\VSCode Projects\RobotFramework_POC"</msg>
+<msg timestamp="20231201 17:21:23.741" level="DEBUG">Process configuration:
+cwd:     C:\Users\david.nowak\VSCode Projects\RobotFramework_POC
+shell:   True
+stdout:  C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\Sikuli_java_stdout_1701447683.739572.txt
+stderr:  C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\Sikuli_java_stderr_1701447683.739572.txt
+stdin:   PIPE
+alias:   None
+env:     None</msg>
+<msg timestamp="20231201 17:21:23.748" level="INFO">Start sikuli java process on port 56092</msg>
+<msg timestamp="20231201 17:21:26.995" level="INFO">Sikuli java process is started</msg>
+<msg timestamp="20231201 17:21:31.003" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:23.737" endtime="20231201 17:21:31.003"/>
 </kw>
-<kw name="GET On Session" library="RequestsLibrary">
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/</arg>
-<arg>expected_status=200</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20231024 16:03:43.033" level="TRACE">Arguments: [ 'mysession' | '/' | expected_status='200' ]</msg>
-<msg timestamp="20231024 16:03:43.035" level="DEBUG">Starting new HTTPS connection (1): reqres.in:443</msg>
-<msg timestamp="20231024 16:03:43.120" level="DEBUG">https://reqres.in:443 "GET /api/users?page=2/ HTTP/1.1" 200 None</msg>
-<msg timestamp="20231024 16:03:43.121" level="INFO">GET Request : url=https://reqres.in/api/users?page=2/ 
- path_url=/api/users?page=2/ 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20231024 16:03:43.121" level="INFO">GET Response : url=https://reqres.in/api/users?page=2/ 
- status=200, reason=OK 
- headers={'Date': 'Tue, 24 Oct 2023 14:03:43 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '368', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=2V%2BVTJe5ZjQ5ttkd%2FWYepmvKZv1vdbkQYPDSLOMXzuNHC9ROK4ZaA90vUs2tJ5yvbIwC3kz5l0vYtSYBhz4lTDH5MWTFlLTxVK%2B3g%2F3skxjB4mzn9KCWQQS5MQ%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '81b2c3ca69b1d536-CDG', 'Content-Encoding': 'gzip'} 
- body={"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
- </msg>
-<msg timestamp="20231024 16:03:43.121" level="INFO">C:\Users\david.nowak\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(</msg>
-<msg timestamp="20231024 16:03:43.122" level="TRACE">Return: &lt;Response [200]&gt;</msg>
-<msg timestamp="20231024 16:03:43.122" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20231024 16:03:43.033" endtime="20231024 16:03:43.122"/>
+<kw name="Initialize All Images">
+<msg timestamp="20231201 17:21:31.003" level="TRACE">Arguments: [  ]</msg>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>C:\\Users\\david.nowak\\VSCode Projects\\RobotFramework_POC\\test${/}Sikuli_Images_SG</arg>
+<doc>Add image path</doc>
+<msg timestamp="20231201 17:21:31.004" level="TRACE">Arguments: [ 'C:\\Users\\david.nowak\\VSCode Projects\\RobotFramework_POC\\test\\Sikuli_Images_SG' ]</msg>
+<msg timestamp="20231201 17:21:31.047" level="TRACE">Return: True</msg>
+<status status="PASS" starttime="20231201 17:21:31.004" endtime="20231201 17:21:31.047"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${response.json()}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231024 16:03:43.123" level="TRACE">Arguments: [ {'data': [{'avatar': 'https://reqres.in/img/faces/7-image.jpg',
-           'email': 'michael.lawson@reqres.in',
-           'first_name': 'Michael',
-           'id': 7,
-           'last_name': 'Lawson'},
-          {'avatar': 'https://reqres.in/img/faces/8-image.jpg',
-           'email': 'lindsay.ferguson@reqres.in',
-           'first_name': 'Lindsay',
-           'id': 8,
-           'last_name': 'Ferguson'},
-          {'avatar': 'https://reqres.in/img/faces/9-image.jpg',
-           'email': 'tobias.funke@reqres.in',
-           'first_name': 'Tobias',
-           'id': 9,
-           'last_name': 'Funke'},
-          {'avatar': 'https://reqres.in/img/faces/10-image.jpg',
-           'email': 'byron.fields@reqres.in',
-           'first_name': 'Byron',
-           'id': 10,
-           'last_name': 'Fields'},
-          {'avatar': 'https://reqres.in/img/faces/11-image.jpg',
-           'email': 'george.edwards@reqres.in',
-           'first_name': 'George',
-           'id': 11,
-           'last_name': 'Edwards'},
-          {'avatar': 'https://reqres.in/img/faces/12-image.jpg',
-           'email': 'rachel.howell@reqres.in',
-           'first_name': 'Rachel',
-           'id': 12,
-           'last_name': 'Howell'}],
- 'page': 2,
- 'per_page': 6,
- 'support': {'text': 'To keep ReqRes free, contributions towards server costs are appreciated!',
-             'url': 'https://reqres.in/#support-heading'},
- 'total': 12,
- 'total_pages': 2} ]</msg>
-<msg timestamp="20231024 16:03:43.123" level="INFO">{'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://reqres.in/img/faces/7-image.jpg'}, {'id': 8, 'email': 'lindsay.ferguson@reqres.in', 'first_name': 'Lindsay', 'last_name': 'Ferguson', 'avatar': 'https://reqres.in/img/faces/8-image.jpg'}, {'id': 9, 'email': 'tobias.funke@reqres.in', 'first_name': 'Tobias', 'last_name': 'Funke', 'avatar': 'https://reqres.in/img/faces/9-image.jpg'}, {'id': 10, 'email': 'byron.fields@reqres.in', 'first_name': 'Byron', 'last_name': 'Fields', 'avatar': 'https://reqres.in/img/faces/10-image.jpg'}, {'id': 11, 'email': 'george.edwards@reqres.in', 'first_name': 'George', 'last_name': 'Edwards', 'avatar': 'https://reqres.in/img/faces/11-image.jpg'}, {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}], 'support': {'url': 'https://reqres.in/#support-heading', 'text': 'To keep ReqRes free, contributions towards server costs are appreciated!'}}</msg>
-<msg timestamp="20231024 16:03:43.123" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231024 16:03:43.122" endtime="20231024 16:03:43.123"/>
+<msg timestamp="20231201 17:21:31.047" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:31.003" endtime="20231201 17:21:31.048"/>
 </kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>200</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<msg timestamp="20231024 16:03:43.124" level="TRACE">Arguments: [ '200' ]</msg>
-<msg timestamp="20231024 16:03:43.124" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231024 16:03:43.124" endtime="20231024 16:03:43.124"/>
+<msg timestamp="20231201 17:21:31.048" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:23.736" endtime="20231201 17:21:31.048"/>
 </kw>
-<kw name="Get Value From Json" library="JSONLibrary">
-<var>${per_page_value}</var>
-<arg>${response.json()}</arg>
-<arg>$.per_page</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<msg timestamp="20231024 16:03:43.125" level="TRACE">Arguments: [ {'data': [{'avatar': 'https://reqres.in/img/faces/7-image.jpg',
-           'email': 'michael.lawson@reqres.in',
-           'first_name': 'Michael',
-           'id': 7,
-           'last_name': 'Lawson'},
-          {'avatar': 'https://reqres.in/img/faces/8-image.jpg',
-           'email': 'lindsay.ferguson@reqres.in',
-           'first_name': 'Lindsay',
-           'id': 8,
-           'last_name': 'Ferguson'},
-          {'avatar': 'https://reqres.in/img/faces/9-image.jpg',
-           'email': 'tobias.funke@reqres.in',
-           'first_name': 'Tobias',
-           'id': 9,
-           'last_name': 'Funke'},
-          {'avatar': 'https://reqres.in/img/faces/10-image.jpg',
-           'email': 'byron.fields@reqres.in',
-           'first_name': 'Byron',
-           'id': 10,
-           'last_name': 'Fields'},
-          {'avatar': 'https://reqres.in/img/faces/11-image.jpg',
-           'email': 'george.edwards@reqres.in',
-           'first_name': 'George',
-           'id': 11,
-           'last_name': 'Edwards'},
-          {'avatar': 'https://reqres.in/img/faces/12-image.jpg',
-           'email': 'rachel.howell@reqres.in',
-           'first_name': 'Rachel',
-           'id': 12,
-           'last_name': 'Howell'}],
- 'page': 2,
- 'per_page': 6,
- 'support': {'text': 'To keep ReqRes free, contributions towards server costs are appreciated!',
-             'url': 'https://reqres.in/#support-heading'},
- 'total': 12,
- 'total_pages': 2} | '$.per_page' ]</msg>
-<msg timestamp="20231024 16:03:43.152" level="TRACE">Return: [6]</msg>
-<msg timestamp="20231024 16:03:43.153" level="INFO">${per_page_value} = [6]</msg>
-<status status="PASS" starttime="20231024 16:03:43.124" endtime="20231024 16:03:43.153"/>
+<test id="s1-t1" name="TestSikuli" line="33">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231201 17:21:31.052" level="TRACE">Arguments: [ 'https://particuliers.sg.fr/' | 'chrome' ]</msg>
+<msg timestamp="20231201 17:21:31.052" level="INFO">Opening browser 'chrome' to base url 'https://particuliers.sg.fr/'.</msg>
+<msg timestamp="20231201 17:21:32.072" level="DEBUG">Started executable: `C:\Users\david.nowak\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.EXE` in a child process with pid: 13108</msg>
+<msg timestamp="20231201 17:21:32.584" level="DEBUG">POST http://localhost:56106/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}}</msg>
+<msg timestamp="20231201 17:21:32.585" level="DEBUG">Starting new HTTP connection (1): localhost:56106</msg>
+<msg timestamp="20231201 17:21:34.248" level="DEBUG">http://localhost:56106 "POST /session HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:34.249" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"119.0.6045.161","chrome":{"chromedriverVersion":"119.0.6045.105 (38c72552c5e15ba9b3117c0967a0fd105072d7c6-refs/branch-heads/6045@{#1103})","userDataDir":"C:\\Users\\DAVID~1.NOW\\AppData\\Local\\Temp\\scoped_dir13108_2062345934"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:56111"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"beb44df49039b33fe79e77ac4dfb3d10"}} | headers=HTTPHeaderDict({'Content-Length': '890', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:34.249" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:34.249" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/timeouts {"script": 5000}</msg>
+<msg timestamp="20231201 17:21:34.254" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/timeouts HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:34.255" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:34.255" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:34.256" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/timeouts {"implicit": 0}</msg>
+<msg timestamp="20231201 17:21:34.262" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/timeouts HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:34.262" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:34.262" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:34.263" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/timeouts {"pageLoad": 300000}</msg>
+<msg timestamp="20231201 17:21:34.265" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/timeouts HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:34.266" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:34.266" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:34.266" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/url {"url": "https://particuliers.sg.fr/"}</msg>
+<msg timestamp="20231201 17:21:36.663" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/url HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:36.664" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:36.664" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:36.664" level="DEBUG">Opened browser with session id beb44df49039b33fe79e77ac4dfb3d10.</msg>
+<msg timestamp="20231201 17:21:36.664" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20231201 17:21:31.051" endtime="20231201 17:21:36.664"/>
 </kw>
-<kw name="Should Be Equal As Integers" library="BuiltIn">
-<arg>${per_page_value[0]}</arg>
-<arg>6</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<msg timestamp="20231024 16:03:43.154" level="TRACE">Arguments: [ 6 | '6' ]</msg>
-<msg timestamp="20231024 16:03:43.154" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<msg timestamp="20231024 16:03:43.154" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231024 16:03:43.153" endtime="20231024 16:03:43.154"/>
+<kw name="Check Acceptations">
+<msg timestamp="20231201 17:21:36.667" level="TRACE">Arguments: [  ]</msg>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20231201 17:21:36.667" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231201 17:21:36.668" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/window/maximize {}</msg>
+<msg timestamp="20231201 17:21:36.891" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/window/maximize HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:36.891" level="DEBUG">Remote response: status=200 | data={"value":{"height":696,"width":1296,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:36.891" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:36.892" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:36.667" endtime="20231201 17:21:36.892"/>
 </kw>
-<kw name="Get Value From Json" library="JSONLibrary">
-<var>${First_Firstname_value}</var>
-<arg>${response.json()}</arg>
-<arg>$.data[0].first_name</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<msg timestamp="20231024 16:03:43.155" level="TRACE">Arguments: [ {'data': [{'avatar': 'https://reqres.in/img/faces/7-image.jpg',
-           'email': 'michael.lawson@reqres.in',
-           'first_name': 'Michael',
-           'id': 7,
-           'last_name': 'Lawson'},
-          {'avatar': 'https://reqres.in/img/faces/8-image.jpg',
-           'email': 'lindsay.ferguson@reqres.in',
-           'first_name': 'Lindsay',
-           'id': 8,
-           'last_name': 'Ferguson'},
-          {'avatar': 'https://reqres.in/img/faces/9-image.jpg',
-           'email': 'tobias.funke@reqres.in',
-           'first_name': 'Tobias',
-           'id': 9,
-           'last_name': 'Funke'},
-          {'avatar': 'https://reqres.in/img/faces/10-image.jpg',
-           'email': 'byron.fields@reqres.in',
-           'first_name': 'Byron',
-           'id': 10,
-           'last_name': 'Fields'},
-          {'avatar': 'https://reqres.in/img/faces/11-image.jpg',
-           'email': 'george.edwards@reqres.in',
-           'first_name': 'George',
-           'id': 11,
-           'last_name': 'Edwards'},
-          {'avatar': 'https://reqres.in/img/faces/12-image.jpg',
-           'email': 'rachel.howell@reqres.in',
-           'first_name': 'Rachel',
-           'id': 12,
-           'last_name': 'Howell'}],
- 'page': 2,
- 'per_page': 6,
- 'support': {'text': 'To keep ReqRes free, contributions towards server costs are appreciated!',
-             'url': 'https://reqres.in/#support-heading'},
- 'total': 12,
- 'total_pages': 2} | '$.data[0].first_name' ]</msg>
-<msg timestamp="20231024 16:03:43.174" level="TRACE">Return: ['Michael']</msg>
-<msg timestamp="20231024 16:03:43.174" level="INFO">${First_Firstname_value} = ['Michael']</msg>
-<status status="PASS" starttime="20231024 16:03:43.155" endtime="20231024 16:03:43.175"/>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//button[@id="popin_tc_privacy_button_3"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20231201 17:21:36.898" level="TRACE">Arguments: [ '//button[@id="popin_tc_privacy_button_3"]' ]</msg>
+<msg timestamp="20231201 17:21:36.900" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/elements {"using": "xpath", "value": "//button[@id=\"popin_tc_privacy_button_3\"]"}</msg>
+<msg timestamp="20231201 17:21:37.097" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/elements HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:37.097" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"261CC23B93AFC8DC06D73721A853D779_element_23"}]} | headers=HTTPHeaderDict({'Content-Length': '97', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:37.097" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:37.097" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/actions {"actions": [{"type": "pointer", "parameters": {"pointerType": "mouse"}, "id": "mouse", "actions": [{"type": "pointerMove", "duration": 250, "x": 0, "y": 0, "origin": {"element-6066-11e4-a52e-4f735466cecf": "261CC23B93AFC8DC06D73721A853D779_element_23"}}]}, {"type": "key", "id": "key", "actions": [{"type": "pause", "duration": 0}]}]}</msg>
+<msg timestamp="20231201 17:21:37.392" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/actions HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:37.393" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:37.393" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:37.393" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:36.893" endtime="20231201 17:21:37.393"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${First_Firstname_value[0]}</arg>
-<arg>Michael</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20231024 16:03:43.176" level="TRACE">Arguments: [ 'Michael' | 'Michael' ]</msg>
-<msg timestamp="20231024 16:03:43.176" level="DEBUG">Argument types are:
-&lt;class 'str'&gt;
-&lt;class 'str'&gt;</msg>
-<msg timestamp="20231024 16:03:43.176" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231024 16:03:43.175" endtime="20231024 16:03:43.176"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@id="popin_tc_privacy_button_3"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231201 17:21:37.393" level="TRACE">Arguments: [ '//button[@id="popin_tc_privacy_button_3"]' ]</msg>
+<msg timestamp="20231201 17:21:37.394" level="INFO">Clicking element '//button[@id="popin_tc_privacy_button_3"]'.</msg>
+<msg timestamp="20231201 17:21:37.394" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/elements {"using": "xpath", "value": "//button[@id=\"popin_tc_privacy_button_3\"]"}</msg>
+<msg timestamp="20231201 17:21:37.408" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/elements HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:37.408" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"261CC23B93AFC8DC06D73721A853D779_element_23"}]} | headers=HTTPHeaderDict({'Content-Length': '97', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:37.408" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:37.408" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/element/261CC23B93AFC8DC06D73721A853D779_element_23/click {"id": "261CC23B93AFC8DC06D73721A853D779_element_23"}</msg>
+<msg timestamp="20231201 17:21:37.637" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/element/261CC23B93AFC8DC06D73721A853D779_element_23/click HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:37.637" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:37.638" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:37.638" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:37.393" endtime="20231201 17:21:37.638"/>
 </kw>
-<kw name="Get Value From Json" library="JSONLibrary">
-<var>${First_Lastname_value}</var>
-<arg>${response.json()}</arg>
-<arg>$.data[0].last_name</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<msg timestamp="20231024 16:03:43.177" level="TRACE">Arguments: [ {'data': [{'avatar': 'https://reqres.in/img/faces/7-image.jpg',
-           'email': 'michael.lawson@reqres.in',
-           'first_name': 'Michael',
-           'id': 7,
-           'last_name': 'Lawson'},
-          {'avatar': 'https://reqres.in/img/faces/8-image.jpg',
-           'email': 'lindsay.ferguson@reqres.in',
-           'first_name': 'Lindsay',
-           'id': 8,
-           'last_name': 'Ferguson'},
-          {'avatar': 'https://reqres.in/img/faces/9-image.jpg',
-           'email': 'tobias.funke@reqres.in',
-           'first_name': 'Tobias',
-           'id': 9,
-           'last_name': 'Funke'},
-          {'avatar': 'https://reqres.in/img/faces/10-image.jpg',
-           'email': 'byron.fields@reqres.in',
-           'first_name': 'Byron',
-           'id': 10,
-           'last_name': 'Fields'},
-          {'avatar': 'https://reqres.in/img/faces/11-image.jpg',
-           'email': 'george.edwards@reqres.in',
-           'first_name': 'George',
-           'id': 11,
-           'last_name': 'Edwards'},
-          {'avatar': 'https://reqres.in/img/faces/12-image.jpg',
-           'email': 'rachel.howell@reqres.in',
-           'first_name': 'Rachel',
-           'id': 12,
-           'last_name': 'Howell'}],
- 'page': 2,
- 'per_page': 6,
- 'support': {'text': 'To keep ReqRes free, contributions towards server costs are appreciated!',
-             'url': 'https://reqres.in/#support-heading'},
- 'total': 12,
- 'total_pages': 2} | '$.data[0].last_name' ]</msg>
-<msg timestamp="20231024 16:03:43.195" level="TRACE">Return: ['Lawson']</msg>
-<msg timestamp="20231024 16:03:43.195" level="INFO">${First_Lastname_value} = ['Lawson']</msg>
-<status status="PASS" starttime="20231024 16:03:43.177" endtime="20231024 16:03:43.195"/>
+<msg timestamp="20231201 17:21:37.638" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:36.666" endtime="20231201 17:21:37.638"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${First_Lastname_value[0]}</arg>
-<arg>Lawson</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20231024 16:03:43.196" level="TRACE">Arguments: [ 'Lawson' | 'Lawson' ]</msg>
-<msg timestamp="20231024 16:03:43.196" level="DEBUG">Argument types are:
-&lt;class 'str'&gt;
-&lt;class 'str'&gt;</msg>
-<msg timestamp="20231024 16:03:43.197" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231024 16:03:43.196" endtime="20231024 16:03:43.197"/>
+<kw name="Go To Personal Space">
+<msg timestamp="20231201 17:21:37.652" level="TRACE">Arguments: [  ]</msg>
+<kw name="Exists" library="SikuliLibrary">
+<arg>${PERSONAL_SPACE_IMAGE}</arg>
+<doc>Exists</doc>
+<msg timestamp="20231201 17:21:37.652" level="TRACE">Arguments: [ 'personal_space_btn.png' ]</msg>
+<msg timestamp="20231201 17:21:39.045" level="TRACE">Return: True</msg>
+<status status="PASS" starttime="20231201 17:21:37.652" endtime="20231201 17:21:39.045"/>
 </kw>
-<kw name="Get From Dictionary" library="Collections">
-<var>${ContentTypeValue}</var>
-<arg>${response.headers}</arg>
-<arg>Content-Type</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20231024 16:03:43.197" level="TRACE">Arguments: [ {'Date': 'Tue, 24 Oct 2023 14:03:43 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '368', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=2V%2BVTJe5ZjQ5ttkd%2FWYepmvKZv1vdbkQYPDSLOMXzuNHC9ROK4ZaA90vUs2tJ5yvbIwC3kz5l0vYtSYBhz4lTDH5MWTFlLTxVK%2B3g%2F3skxjB4mzn9KCWQQS5MQ%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '81b2c3ca69b1d536-CDG', 'Content-Encoding': 'gzip'} | 'Content-Type' ]</msg>
-<msg timestamp="20231024 16:03:43.197" level="TRACE">Return: 'application/json; charset=utf-8'</msg>
-<msg timestamp="20231024 16:03:43.197" level="INFO">${ContentTypeValue} = application/json; charset=utf-8</msg>
-<status status="PASS" starttime="20231024 16:03:43.197" endtime="20231024 16:03:43.197"/>
+<kw name="Click" library="SikuliLibrary">
+<arg>${PERSONAL_SPACE_IMAGE}</arg>
+<doc>Click</doc>
+<msg timestamp="20231201 17:21:39.046" level="TRACE">Arguments: [ 'personal_space_btn.png' ]</msg>
+<msg timestamp="20231201 17:21:40.219" level="DEBUG">Saved path: C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\sikuli_captured\sikuliximage-1701447699364.png</msg>
+<msg timestamp="20231201 17:21:40.219" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1701447699364.png'/&gt;
+[log] CLICK on L[1166,190]@S(0) (568 msec)</msg>
+<msg timestamp="20231201 17:21:40.219" level="TRACE">Return: [1099, 173, 134, 34]</msg>
+<status status="PASS" starttime="20231201 17:21:39.045" endtime="20231201 17:21:40.220"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${ContentTypeValue}</arg>
-<arg>application/json; charset=utf-8</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<msg timestamp="20231024 16:03:43.198" level="TRACE">Arguments: [ 'application/json; charset=utf-8' | 'application/json; charset=utf-8' ]</msg>
-<msg timestamp="20231024 16:03:43.198" level="DEBUG">Argument types are:
-&lt;class 'str'&gt;
-&lt;class 'str'&gt;</msg>
-<msg timestamp="20231024 16:03:43.198" level="TRACE">Return: None</msg>
-<status status="PASS" starttime="20231024 16:03:43.198" endtime="20231024 16:03:43.198"/>
+<msg timestamp="20231201 17:21:40.220" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:37.651" endtime="20231201 17:21:40.220"/>
 </kw>
-<status status="PASS" starttime="20231024 16:03:43.031" endtime="20231024 16:03:43.198"/>
+<kw name="Enter Customer ID And Validate">
+<msg timestamp="20231201 17:21:40.225" level="TRACE">Arguments: [  ]</msg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="user_id"]</arg>
+<arg>24386668</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231201 17:21:40.226" level="TRACE">Arguments: [ '//input[@id="user_id"]' | '24386668' ]</msg>
+<msg timestamp="20231201 17:21:40.226" level="INFO">Typing text '24386668' into text field '//input[@id="user_id"]'.</msg>
+<msg timestamp="20231201 17:21:40.227" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/elements {"using": "xpath", "value": "//input[@id=\"user_id\"]"}</msg>
+<msg timestamp="20231201 17:21:41.393" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/elements HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:41.393" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"8DA1F163C4914530333C41EC3EA9B13C_element_63"}]} | headers=HTTPHeaderDict({'Content-Length': '97', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:41.393" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:41.394" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/element/8DA1F163C4914530333C41EC3EA9B13C_element_63/clear {"id": "8DA1F163C4914530333C41EC3EA9B13C_element_63"}</msg>
+<msg timestamp="20231201 17:21:41.611" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/element/8DA1F163C4914530333C41EC3EA9B13C_element_63/clear HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:41.611" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:41.612" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:41.612" level="DEBUG">POST http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10/element/8DA1F163C4914530333C41EC3EA9B13C_element_63/value {"text": "24386668", "value": ["2", "4", "3", "8", "6", "6", "6", "8"], "id": "8DA1F163C4914530333C41EC3EA9B13C_element_63"}</msg>
+<msg timestamp="20231201 17:21:41.822" level="DEBUG">http://localhost:56106 "POST /session/beb44df49039b33fe79e77ac4dfb3d10/element/8DA1F163C4914530333C41EC3EA9B13C_element_63/value HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:41.823" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:41.824" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:41.824" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:40.226" endtime="20231201 17:21:41.825"/>
+</kw>
+<kw name="Exists" library="SikuliLibrary">
+<arg>${VALIDATE_IMAGE}</arg>
+<doc>Exists</doc>
+<msg timestamp="20231201 17:21:41.825" level="TRACE">Arguments: [ 'validation_btn.png' ]</msg>
+<msg timestamp="20231201 17:21:42.060" level="TRACE">Return: True</msg>
+<status status="PASS" starttime="20231201 17:21:41.825" endtime="20231201 17:21:42.060"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${VALIDATE_IMAGE}</arg>
+<doc>Click</doc>
+<msg timestamp="20231201 17:21:42.061" level="TRACE">Arguments: [ 'validation_btn.png' ]</msg>
+<msg timestamp="20231201 17:21:43.101" level="DEBUG">Saved path: C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\sikuli_captured\sikuliximage-1701447702311.png</msg>
+<msg timestamp="20231201 17:21:43.101" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1701447702311.png'/&gt;
+[log] CLICK on L[297,490]@S(0) (572 msec)</msg>
+<msg timestamp="20231201 17:21:43.101" level="TRACE">Return: [180, 467, 235, 47]</msg>
+<status status="PASS" starttime="20231201 17:21:42.060" endtime="20231201 17:21:43.101"/>
+</kw>
+<msg timestamp="20231201 17:21:43.101" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:40.225" endtime="20231201 17:21:43.102"/>
+</kw>
+<kw name="Input Secret Code">
+<msg timestamp="20231201 17:21:43.103" level="TRACE">Arguments: [  ]</msg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231201 17:21:43.104" level="TRACE">Arguments: [ '2 seconds' ]</msg>
+<msg timestamp="20231201 17:21:45.106" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20231201 17:21:45.106" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:43.104" endtime="20231201 17:21:45.106"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${1_IMAGE}</arg>
+<doc>Click</doc>
+<msg timestamp="20231201 17:21:45.106" level="TRACE">Arguments: [ '1_nb.png' ]</msg>
+<msg timestamp="20231201 17:21:46.094" level="DEBUG">Saved path: C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\sikuli_captured\sikuliximage-1701447705339.png</msg>
+<msg timestamp="20231201 17:21:46.094" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1701447705339.png'/&gt;
+[log] CLICK on L[326,449]@S(0) (562 msec)</msg>
+<msg timestamp="20231201 17:21:46.094" level="TRACE">Return: [299, 422, 55, 55]</msg>
+<status status="PASS" starttime="20231201 17:21:45.106" endtime="20231201 17:21:46.094"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${2_IMAGE}</arg>
+<doc>Click</doc>
+<msg timestamp="20231201 17:21:46.095" level="TRACE">Arguments: [ '2_nb.png' ]</msg>
+<msg timestamp="20231201 17:21:47.096" level="DEBUG">Saved path: C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\sikuli_captured\sikuliximage-1701447706326.png</msg>
+<msg timestamp="20231201 17:21:47.096" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1701447706326.png'/&gt;
+[log] CLICK on L[326,389]@S(0) (557 msec)</msg>
+<msg timestamp="20231201 17:21:47.096" level="TRACE">Return: [298, 362, 56, 55]</msg>
+<status status="PASS" starttime="20231201 17:21:46.095" endtime="20231201 17:21:47.096"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${3_IMAGE}</arg>
+<doc>Click</doc>
+<msg timestamp="20231201 17:21:47.096" level="TRACE">Arguments: [ '3_nb.png' ]</msg>
+<msg timestamp="20231201 17:21:48.072" level="DEBUG">Saved path: C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\sikuli_captured\sikuliximage-1701447707299.png</msg>
+<msg timestamp="20231201 17:21:48.072" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1701447707299.png'/&gt;
+[log] CLICK on L[207,451]@S(0) (561 msec)</msg>
+<msg timestamp="20231201 17:21:48.072" level="TRACE">Return: [180, 424, 54, 55]</msg>
+<status status="PASS" starttime="20231201 17:21:47.096" endtime="20231201 17:21:48.072"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${4_IMAGE}</arg>
+<doc>Click</doc>
+<msg timestamp="20231201 17:21:48.073" level="TRACE">Arguments: [ '4_nb.png' ]</msg>
+<msg timestamp="20231201 17:21:49.054" level="DEBUG">Saved path: C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\sikuli_captured\sikuliximage-1701447708299.png</msg>
+<msg timestamp="20231201 17:21:49.054" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1701447708299.png'/&gt;
+[log] CLICK on L[386,390]@S(0) (564 msec)</msg>
+<msg timestamp="20231201 17:21:49.055" level="TRACE">Return: [359, 363, 54, 55]</msg>
+<status status="PASS" starttime="20231201 17:21:48.073" endtime="20231201 17:21:49.055"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${5_IMAGE}</arg>
+<doc>Click</doc>
+<msg timestamp="20231201 17:21:49.055" level="TRACE">Arguments: [ '5_nb.png' ]</msg>
+<msg timestamp="20231201 17:21:50.064" level="DEBUG">Saved path: C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\sikuli_captured\sikuliximage-1701447709289.png</msg>
+<msg timestamp="20231201 17:21:50.064" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1701447709289.png'/&gt;
+[log] CLICK on L[206,511]@S(0) (566 msec)</msg>
+<msg timestamp="20231201 17:21:50.064" level="TRACE">Return: [179, 484, 55, 55]</msg>
+<status status="PASS" starttime="20231201 17:21:49.055" endtime="20231201 17:21:50.064"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>${6_IMAGE}</arg>
+<doc>Click</doc>
+<msg timestamp="20231201 17:21:50.065" level="TRACE">Arguments: [ '6_nb.png' ]</msg>
+<msg timestamp="20231201 17:21:51.024" level="DEBUG">Saved path: C:\Users\david.nowak\VSCode Projects\RobotFramework_POC\sikuli_captured\sikuliximage-1701447710267.png</msg>
+<msg timestamp="20231201 17:21:51.024" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1701447710267.png'/&gt;
+[log] CLICK on L[266,391]@S(0) (551 msec)</msg>
+<msg timestamp="20231201 17:21:51.024" level="TRACE">Return: [239, 363, 55, 56]</msg>
+<status status="PASS" starttime="20231201 17:21:50.065" endtime="20231201 17:21:51.024"/>
+</kw>
+<msg timestamp="20231201 17:21:51.024" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:43.103" endtime="20231201 17:21:51.025"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20231201 17:21:51.026" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231201 17:21:51.026" level="DEBUG">Closing browser with session id beb44df49039b33fe79e77ac4dfb3d10.</msg>
+<msg timestamp="20231201 17:21:51.026" level="DEBUG">DELETE http://localhost:56106/session/beb44df49039b33fe79e77ac4dfb3d10 {}</msg>
+<msg timestamp="20231201 17:21:51.415" level="DEBUG">http://localhost:56106 "DELETE /session/beb44df49039b33fe79e77ac4dfb3d10 HTTP/1.1" 200 0</msg>
+<msg timestamp="20231201 17:21:51.415" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg timestamp="20231201 17:21:51.415" level="DEBUG">Finished Request</msg>
+<msg timestamp="20231201 17:21:53.621" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20231201 17:21:51.025" endtime="20231201 17:21:53.621"/>
+</kw>
+<status status="PASS" starttime="20231201 17:21:31.048" endtime="20231201 17:21:53.622"/>
 </test>
-<status status="PASS" starttime="20231024 16:03:42.864" endtime="20231024 16:03:43.199"/>
+<kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
+<doc>Stops the remote server.</doc>
+<msg timestamp="20231201 17:21:53.624" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20231201 17:21:53.628" level="INFO">Robot Framework remote server stopping</msg>
+<msg timestamp="20231201 17:21:53.628" level="TRACE">Return: True</msg>
+<status status="PASS" starttime="20231201 17:21:53.624" endtime="20231201 17:21:53.628"/>
+</kw>
+<doc>Sikuli With Robot RobotFramework    http://rainmanwy.github.io/robotframework-SikuliLibrary/doc/SikuliLibrary.html</doc>
+<status status="PASS" starttime="20231201 17:21:16.681" endtime="20231201 17:21:53.628"/>
 </suite>
 <statistics>
 <total>
@@ -287,7 +287,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="ApiTesting">ApiTesting</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="SG Login sikuli">SG Login sikuli</stat>
 </suite>
 </statistics>
 <errors>
